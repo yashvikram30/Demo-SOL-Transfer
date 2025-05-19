@@ -1,8 +1,8 @@
 "use client"
-import { WalletMultiButton } from '@solana/wallet-adapter-react-ui'
-import React from 'react'
 
-const Appbar = () => {
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+
+export default function Appbar() {
   return (
     <div className="flex justify-between items-center py-4">
       <div className="text-xl font-bold">SOL Money Transfer</div>
@@ -10,5 +10,3 @@ const Appbar = () => {
     </div>
   )
 }
-
-export default Appbar

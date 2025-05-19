@@ -1,15 +1,13 @@
-"use client"
-import WalletContextProvider from "@/components/WalletContextProvider";
-import TransferForm from "@/components/TransferForm";
-import Appbar from "@/components/Appbar";
+
+// app/page.tsx
+import Appbar from "../components/Appbar";
+import TransferForm from "../components/TransferForm";
 
 export default function Home() {
   return (
-    <WalletContextProvider>
-      <div className="container mx-auto p-4">
-        <Appbar />
-        <TransferForm />
-      </div>
-    </WalletContextProvider>
+    <main>
+      <Appbar />
+      <TransferForm />
+    </main>
   );
 }
