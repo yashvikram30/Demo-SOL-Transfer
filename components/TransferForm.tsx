@@ -48,6 +48,7 @@ export default function TransferForm() {
         receiverId = new PublicKey(receiverRef.current.value);
       } catch (e) {
         setError("Invalid receiver address format");
+        console.log(e);
         setLoading(false);
         return;
       }
@@ -79,6 +80,7 @@ export default function TransferForm() {
       const confirmation = await connection.confirmTransaction(signature);
       
       setSuccess(`Transaction sent successfully! Signature: ${signature}`);
+      console.log(confirmation);
       
       // Reset form
       if (receiverRef.current) receiverRef.current.value = '';
@@ -133,6 +135,7 @@ export default function TransferForm() {
       
       // Wait for confirmation
       const confirmation = await connection.confirmTransaction(signature);
+      console.log(confirmation);
       
       setSuccess(`Airdrop of ${amount} SOL received! Signature: ${signature}`);
       
